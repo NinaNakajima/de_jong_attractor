@@ -28,11 +28,11 @@ void setup(){
   blendMode(ADD);
   colorMode(HSB, 360, 100, 100);
   background(0);
-  println("number=", count, ", a=", a, ", b=", b, ", c=", c, ", d=", d);  //コンソールに値を出力
+  println("number=", count, ", a=", a, ", b=", b, ", c=", c, ", d=", d);
 }
 
 void draw(){
-  stroke(cl, 40, 100, 50);  //色の指定
+  stroke(cl, 40, 100, 50);
   float _x, _y;
   for (int i = 0; i < 500; i++){
     _x = sin(a * y) - cos(b * x);
@@ -44,10 +44,10 @@ void draw(){
 }
 
 void keyPressed(){
-  if(keyCode == ENTER){  //エンターキーが押されたら
+  if(keyCode == ENTER){
     //「日時_番号.png」の名前で画像を保存
     save(ye + "_"+ mo + "_" + da + "_" + ho + "_" + mi + "_" + se + "_" + count + ".png");
-    count++;      //この処理を行うごとにcount(番号)を1増やす
+    count++;
   }
 }
 
@@ -59,10 +59,5 @@ void mousePressed() {
   c = random(-5.0, 5.0);
   d = random(-5.0, 5.0);
   cl = random(360);
-  println("number=", count, ", a=", a, ", b=", b, ", c=", c, ", d=", d);  //コンソールに値を出力
+  println("number=", count, ", a=", a, ", b=", b, ", c=", c, ", d=", d);
 }
-
-
-//referenceURL
-//https://www.fal-works.com/creative-coding-posts/de-jong-attractor
-//https://ayumu-nagamatsu.com/archives/431/
